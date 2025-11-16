@@ -15,7 +15,7 @@ if not _G.httpRequest then
 else
     local l_LocalPlayer_0 = v0.Players.LocalPlayer;
     local v2 = l_LocalPlayer_0.Character and l_LocalPlayer_0.Character:WaitForChild("HumanoidRootPart") or l_LocalPlayer_0.CharacterAdded:Wait():WaitForChild("HumanoidRootPart");
-    local v3 = "Rapliyy/FishIt" .. "/Position.json";
+    local v3 = "Chloe X/FishIt" .. "/Position.json";
     local v4 = {
         MerchantRoot = v0.PG.Merchant.Main.Background, 
         ItemsFrame = v0.PG.Merchant.Main.Background.Items.ScrollingFrame, 
@@ -341,7 +341,7 @@ else
             if v63 then
                 task.wait(2);
                 l_HumanoidRootPart_0.CFrame = v63;
-                rapliyy("Teleported to your last position...");
+                chloex("Teleported to your last position...");
             end;
         end);
     end;
@@ -464,7 +464,7 @@ else
     local function v103(v102) --[[ Line: 0 ]] --[[ Name:  ]]
         -- upvalues: v8 (ref)
         if v8.lastState ~= v102 then
-            rapliyy(v102);
+            chloex(v102);
             v8.lastState = v102;
         end;
     end;
@@ -537,11 +537,11 @@ else
                     if v8.curCF then
                         v116:PivotTo(v8.curCF);
                         v76(v116, v117, true);
-                        rapliyy("Respawn \226\134\146 Back");
+                        chloex("Respawn \226\134\146 Back");
                     elseif v8.origCF then
                         v116:PivotTo(v8.origCF);
                         v76(v116, v117, true);
-                        rapliyy("Back to farm");
+                        chloex("Back to farm");
                     end;
                 end;
             end);
@@ -607,16 +607,16 @@ else
         -- upvalues: v8 (ref)
         v8.notifConnections = {};
     end;
-    local v129 = loadstring(game:HttpGet("https://raw.githubusercontent.com/sctefhanie/raplii/refs/heads/main/library.lua"))():Window({
-        Title = "Rapliyy |", 
+    local v129 = loadstring(game:HttpGet("https://raw.githubusercontent.com/TesterX14/XXXX/refs/heads/main/Library"))():Window({
+        Title = "Chloe X |", 
         Footer = "Fish It | Beta Release", 
         Image = "132435516080103", 
-        Color = Color3.fromRGB(41, 45, 62), 
+        Color = Color3.fromRGB(0, 208, 255), 
         Theme = 9542022979, 
         Version = 2
     });
     if v129 then
-        rapliyy("Window loaded!");
+        chloex("Window loaded!");
     end;
     local v130 = {
         Info = v129:AddTab({
@@ -652,7 +652,7 @@ else
             Icon = "rbxassetid://6034509993"
         })
     };
-    local v131 = "https://raw.githubusercontent.com/sctefhanie/raplii/refs/heads/main/r.lua";
+    local v131 = "https://raw.githubusercontent.com/ChloeRewite/test/refs/heads/main/2.lua";
     local l_status_4, l_result_4 = pcall(function() --[[ Line: 0 ]] --[[ Name:  ]]
         -- upvalues: v131 (ref)
         local v132 = game:HttpGet(v131);
@@ -730,7 +730,7 @@ else
                             elseif v8.fishingTimer >= (v8.stuckThreshold or 10) then
                                 l_l_v8_2_0 = "STUCK! Resetting...";
                                 l_l_v8_3_0 = "255,69,0";
-                                rapliyy("Fishing Stuck! Resetting...", 3);
+                                chloex("Fishing Stuck! Resetting...", 3);
                                 local v148 = v8.char and v8.char:FindFirstChild("HumanoidRootPart");
                                 if v148 then
                                     v8.savedCFrame = v148.CFrame;
@@ -1468,7 +1468,7 @@ else
             local v264 = l_Character_1 and l_Character_1:FindFirstChild("HumanoidRootPart");
             if v264 then
                 SavePosition(v264.CFrame);
-                rapliyy("Position saved successfully!");
+                chloex("Position saved successfully!");
             end;
         end, 
         SubTitle = "Reset Position", 
@@ -1477,7 +1477,7 @@ else
             if isfile(v3) then
                 delfile(v3);
             end;
-            rapliyy("Last position has been reset.");
+            chloex("Last position has been reset.");
         end
     });
     local v265 = v130.Auto:AddSection("Enchant Features");
@@ -1745,7 +1745,7 @@ else
                 v6.Events.Totem:FireServer(v338);
             end);
             if not l_status_5 then
-                warn("[Rapliyy] Totem spawn failed:", tostring(l_result_5));
+                warn("[Chloe X] Totem spawn failed:", tostring(l_result_5));
             end;
             return;
         end;
@@ -1876,7 +1876,7 @@ else
             else
                 if v8.origCF then
                     l_LocalPlayer_0.Character:PivotTo(v8.origCF);
-                    rapliyy("Auto Event Off");
+                    chloex("Auto Event Off");
                 end;
                 local l_v8_4 = v8;
                 local l_v8_5 = v8;
@@ -1987,10 +1987,10 @@ else
         else
             if v400 then
                 v388("Sending");
-                rapliyy("Sending " .. v400);
+                chloex("Sending " .. v400);
             else
                 v393("Sending");
-                rapliyy("Sending fish for coins");
+                chloex("Sending fish for coins");
             end;
             if not pcall(function() --[[ Line: 0 ]] --[[ Name:  ]]
                 -- upvalues: v6 (ref), v403 (ref), v399 (ref)
@@ -2046,16 +2046,16 @@ else
         if l_trade_4.trading then
             return;
         elseif not l_trade_4.selectedPlayer or not l_trade_4.selectedItem then
-            return rapliyy("Select player & item first!");
+            return chloex("Select player & item first!");
         else
             l_trade_4.trading = true;
             l_trade_4.successCount = 0;
-            rapliyy("Starting trade with " .. l_trade_4.selectedPlayer);
+            chloex("Starting trade with " .. l_trade_4.selectedPlayer);
             local v414 = l_trade_4.currentGrouped[l_trade_4.selectedItem];
             if not v414 then
                 l_trade_4.trading = false;
                 v388("<font color='#ff3333'>Item not found</font>");
-                return rapliyy("Item not found");
+                return chloex("Item not found");
             else
                 l_trade_4.totalToTrade = math.min(l_trade_4.tradeAmount, #v414.uuids);
                 local v415 = 1;
@@ -2069,7 +2069,7 @@ else
                 end;
                 l_trade_4.trading = false;
                 v388("<font color='#66ccff'>All trades finished</font>");
-                rapliyy("All trades finished");
+                chloex("All trades finished");
                 return;
             end;
         end;
@@ -2100,7 +2100,7 @@ else
         if l_trade_5.trading then
             return;
         elseif not l_trade_5.selectedPlayer or l_trade_5.targetCoins <= 0 then
-            return rapliyy("\226\154\160 Select player & coin target first!");
+            return chloex("\226\154\160 Select player & coin target first!");
         else
             l_trade_5.trading = true;
             local v425 = 0;
@@ -2109,7 +2109,7 @@ else
             l_trade_5.successCoins = v426;
             l_trade_5.sentCoins = v425;
             v393("<font color='#ffaa00'>Starting...</font>");
-            rapliyy("Starting coin trade with " .. l_trade_5.selectedPlayer);
+            chloex("Starting coin trade with " .. l_trade_5.selectedPlayer);
             v425 = v0.Players.LocalPlayer;
             v426 = v5.PlayerStatsUtility:GetPlayerModifiers(v425);
             local v427 = {};
@@ -2134,7 +2134,7 @@ else
             if #v427 == 0 then
                 l_trade_5.trading = false;
                 v393("<font color='#ff3333'>No fishes found</font>");
-                rapliyy("\226\154\160 No fishes found in inventory");
+                chloex("\226\154\160 No fishes found in inventory");
                 return;
             else
                 local v434, v435 = chooseFishesByRange(v427, l_trade_5.targetCoins);
@@ -2163,7 +2163,7 @@ else
                         end;
                         l_trade_5.trading = false;
                         v393(string.format("<font color='#66ccff'>Coin trade finished (Target: %d, Received: %d)</font>", l_trade_5.targetCoins, l_trade_5.successCoins));
-                        rapliyy(string.format("Coin trade finished (Target: %d, Received: %d)", l_trade_5.targetCoins, l_trade_5.successCoins));
+                        chloex(string.format("Coin trade finished (Target: %d, Received: %d)", l_trade_5.targetCoins, l_trade_5.successCoins));
                         return;
                     end;
                 end;
@@ -2360,11 +2360,11 @@ else
         if l_trade_7.trading then
             return;
         elseif not l_trade_7.selectedPlayer or not l_trade_7.selectedRarity then
-            return rapliyy("\226\154\160 Select player & rarity first!");
+            return chloex("\226\154\160 Select player & rarity first!");
         else
             l_trade_7.trading = true;
             l_trade_7.successCount = 0;
-            rapliyy("Starting rarity trade (" .. l_trade_7.selectedRarity .. ") with " .. l_trade_7.selectedPlayer);
+            chloex("Starting rarity trade (" .. l_trade_7.selectedRarity .. ") with " .. l_trade_7.selectedPlayer);
             v462("<font color='#ffaa00'>Scanning " .. l_trade_7.selectedRarity .. " fishes...</font>");
             local v470 = {};
             for _, v472 in ipairs(v7.Data:GetExpect({
@@ -2382,7 +2382,7 @@ else
             if #v470 == 0 then
                 l_trade_7.trading = false;
                 v462("<font color='#ff3333'>No " .. l_trade_7.selectedRarity .. " fishes found</font>");
-                return rapliyy("No " .. l_trade_7.selectedRarity .. " fishes found");
+                return chloex("No " .. l_trade_7.selectedRarity .. " fishes found");
             else
                 l_trade_7.totalToTrade = math.min(#v470, l_trade_7.rarityAmount or #v470);
                 v462(string.format("Sending %d %s fishes...", l_trade_7.totalToTrade, l_trade_7.selectedRarity));
@@ -2398,7 +2398,7 @@ else
                 end;
                 l_trade_7.trading = false;
                 v462("<font color='#66ccff'>Rarity trade finished</font>");
-                rapliyy("Rarity trade finished (" .. l_trade_7.selectedRarity .. ")");
+                chloex("Rarity trade finished (" .. l_trade_7.selectedRarity .. ")");
                 return;
             end;
         end;
@@ -2918,7 +2918,7 @@ else
         Callback = function() --[[ Line: 0 ]] --[[ Name:  ]]
             -- upvalues: v592 (ref), v121 (ref)
             v592:SetValues(v121());
-            rapliyy("Player list refreshed!");
+            chloex("Player list refreshed!");
         end
     });
     v590:AddButton({
@@ -2928,7 +2928,7 @@ else
             -- upvalues: v8 (ref), v0 (ref), l_LocalPlayer_0 (ref)
             local l_teleportTarget_0 = v8.trade.teleportTarget;
             if not l_teleportTarget_0 then
-                rapliyy("Please select a player first!");
+                chloex("Please select a player first!");
                 return;
             else
                 local l_FirstChild_1 = v0.Players:FindFirstChild(l_teleportTarget_0);
@@ -2936,12 +2936,12 @@ else
                     local v595 = l_LocalPlayer_0.Character and l_LocalPlayer_0.Character:FindFirstChild("HumanoidRootPart");
                     if v595 then
                         v595.CFrame = l_FirstChild_1.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0);
-                        rapliyy("Teleported to " .. l_FirstChild_1.Name);
+                        chloex("Teleported to " .. l_FirstChild_1.Name);
                     else
-                        rapliyy("Your HumanoidRootPart not found.");
+                        chloex("Your HumanoidRootPart not found.");
                     end;
                 else
-                    rapliyy("Target not found or not loaded.");
+                    chloex("Target not found or not loaded.");
                 end;
                 return;
             end;
@@ -2969,7 +2969,7 @@ else
             -- upvalues: v8 (ref), v122 (ref), l_LocalPlayer_0 (ref)
             local l_teleportTarget_1 = v8.teleportTarget;
             if not l_teleportTarget_1 then
-                rapliyy("Please select a location first!");
+                chloex("Please select a location first!");
                 return;
             else
                 local v602 = v122[l_teleportTarget_1];
@@ -2977,7 +2977,7 @@ else
                     local v603 = l_LocalPlayer_0.Character and l_LocalPlayer_0.Character:FindFirstChild("HumanoidRootPart");
                     if v603 then
                         v603.CFrame = CFrame.new(v602 + Vector3.new(0, 3, 0));
-                        rapliyy("Teleported to " .. l_teleportTarget_1);
+                        chloex("Teleported to " .. l_teleportTarget_1);
                     end;
                 end;
                 return;
@@ -3122,14 +3122,14 @@ else
                         return;
                     else
                         _G.hideident.overhead.TitleContainer.Visible = true;
-                        _G.hideident.titleLabel.Text = "Rapliyy";
+                        _G.hideident.titleLabel.Text = "Chloe X";
                         _G.hideident.gradient.Color = ColorSequence.new({
                             ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 85, 255)), 
                             ColorSequenceKeypoint.new(0.333333, Color3.fromRGB(145, 186, 255)), 
                             ColorSequenceKeypoint.new(1, Color3.fromRGB(136, 243, 255))
                         });
                         _G.hideident.gradient.Rotation = 0;
-                        _G.hideident.header.Text = customHeaderText and customHeaderText ~= "" and customHeaderText or "Raplii Rawr";
+                        _G.hideident.header.Text = customHeaderText and customHeaderText ~= "" and customHeaderText or "Chloe Rawr";
                         _G.hideident.levelLabel.Text = customLevelText and customLevelText ~= "" and customLevelText or "???";
                         return;
                     end;
@@ -3198,7 +3198,7 @@ else
                                                         pcall(function() --[[ Line: 0 ]] --[[ Name:  ]]
                                                             -- upvalues: v6 (ref), l_v625_0 (ref)
                                                             v6.Events.REEvReward:FireServer(l_v625_0);
-                                                            rapliyy(string.format("Claimed Reward #%d", l_v625_0));
+                                                            chloex(string.format("Claimed Reward #%d", l_v625_0));
                                                         end);
                                                         task.wait(0.7);
                                                     end;
@@ -3495,8 +3495,8 @@ else
                         local v675 = {
                             embeds = {
                                 {
-                                    title = "Rapliyy Webhook | Fish Caught", 
-                                    url = "https://discord.gg/hXpCC3fD", 
+                                    title = "Chloe X Webhook | Fish Caught", 
+                                    url = "https://discord.gg/PaPvGUE8UC", 
                                     description = string.format("\226\156\166\239\184\142 Congratulations!! **%s** You have obtained a new **%s** fish!", _G.WebhookCustomName ~= "" and _G.WebhookCustomName or game.Players.LocalPlayer.Name, v671), 
                                     color = 52221, 
                                     fields = {
@@ -3525,13 +3525,13 @@ else
                                         url = getThumbnailURL(v670.Icon) or "https://i.imgur.com/WltO8IG.png"
                                     }, 
                                     footer = {
-                                        text = "Rapliyy Webhook", 
+                                        text = "Chloe X Webhook", 
                                         icon_url = "https://i.imgur.com/WltO8IG.png"
                                     }, 
                                     timestamp = os.date("!%Y-%m-%dT%H:%M:%S.000Z")
                                 }
                             }, 
-                            username = "Rapliyy Notification!", 
+                            username = "Chloe X Notification!", 
                             avatar_url = "https://i.imgur.com/9afHGRy.jpeg"
                         };
                         sendWebhook(l_URL_0, v675);
@@ -3555,7 +3555,7 @@ else
         until REObtainedNewFishNotification;
         if not _G.FishWebhookConnected then
             _G.FishWebhookConnected = true;
-            print("[Rapliyy] Webhook Connected to Fish Notification");
+            print("[Chloe X] Webhook Connected to Fish Notification");
             REObtainedNewFishNotification.OnClientEvent:Connect(function(v679, v680) --[[ Line: 0 ]] --[[ Name:  ]]
                 -- upvalues: v8 (ref)
                 if v8.autoWebhook then
@@ -3658,7 +3658,7 @@ else
                             }
                         }
                     }, 
-                    username = "Rapliyy Notification!", 
+                    username = "Chloe X Notification!", 
                     avatar_url = "https://i.imgur.com/9afHGRy.jpeg", 
                     attachments = {}
                 };
@@ -3958,11 +3958,11 @@ else
                             end;
                             local v785 = #v778 > 0 and table.concat(v778, "\n") or "(No Fishes Found)";
                             local v786 = {
-                                username = "Rapliyy Notification!", 
+                                username = "Chloe X Notification!", 
                                 avatar_url = "https://i.imgur.com/9afHGRy.jpeg", 
                                 embeds = {
                                     {
-                                        title = "\227\128\162Rapliyy Webhook | Player Info", 
+                                        title = "\227\128\162Chloe X Webhook | Player Info", 
                                         color = 52479, 
                                         fields = {
                                             {
@@ -3989,7 +3989,7 @@ else
                                             }
                                         }, 
                                         footer = {
-                                            text = string.format("Rapliyy Auto Sync | Every %dm", _G.WebhookFlags.Stats.Delay or 5), 
+                                            text = string.format("Chloe X Auto Sync | Every %dm", _G.WebhookFlags.Stats.Delay or 5), 
                                             icon_url = "https://i.imgur.com/WltO8IG.png"
                                         }, 
                                         timestamp = os.date("!%Y-%m-%dT%H:%M:%S.000Z")
@@ -4074,7 +4074,7 @@ else
                             }
                         }
                     }, 
-                    username = "Rapliyy Notification!", 
+                    username = "Chloe X Notification!", 
                     avatar_url = "https://i.imgur.com/9afHGRy.jpeg"
                 };
                 task.spawn(function() --[[ Line: 0 ]] --[[ Name:  ]]
@@ -4186,7 +4186,7 @@ else
         Title = "Test Disconnected Player", 
         Content = "Kick yourself, send webhook, and auto rejoin.", 
         Callback = function() --[[ Line: 0 ]] --[[ Name:  ]]
-            rapliyy("Kicking player...");
+            chloex("Kicking player...");
             task.wait(1);
             SendDisconnectWebhook("Test Successfully :3");
             task.wait(2);
@@ -4204,7 +4204,7 @@ else
             -- upvalues: v820 (ref)
             if v822 and v822:match("^https://discord.com/api/webhooks/") then
                 v820.Links.Hunt = v822;
-                rapliyy("Hunt webhook updated!");
+                chloex("Hunt webhook updated!");
             end;
         end
     });
@@ -4215,7 +4215,7 @@ else
             -- upvalues: v820 (ref)
             if v823 and v823:match("^https://discord.com/api/webhooks/") then
                 v820.Links.ServerLuck = v823;
-                rapliyy("Server Luck webhook updated!");
+                chloex("Server Luck webhook updated!");
             end;
         end
     });
